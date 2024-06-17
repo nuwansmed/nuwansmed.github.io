@@ -1,1 +1,0 @@
-# nuwansmed.github.io
