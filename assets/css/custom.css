@@ -1,0 +1,10 @@
+/* Hide the sidebar on the homepage (index.md) */
+.hide-sidebar .md-sidebar {
+    display: none;
+}
+
+/* Adjust content width when sidebar is hidden */
+.hide-sidebar .md-content {
+    margin-left: 0;
+    width: 100%;
+}
