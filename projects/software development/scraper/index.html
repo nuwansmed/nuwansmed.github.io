@@ -1,0 +1,1788 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Welcome to my portfolio">
+      
+      
+      
+        <link rel="canonical" href="https://nuwansmed.github.io/projects/software%20development/scraper/">
+      
+      
+        <link rel="prev" href="../rental/">
+      
+      
+        <link rel="next" href="../sporify/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>Car Advertisement Scraper Application - Nuwan S. Medawaththa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#car-advertisement-scraper-application" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Nuwan S. Medawaththa" class="md-header__button md-logo" aria-label="Nuwan S. Medawaththa" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nuwan S. Medawaththa
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Car Advertisement Scraper Application
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../competitions/" class="md-tabs__link">
+          
+  
+  Competitions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Nuwan S. Medawaththa" class="md-nav__button md-logo" aria-label="Nuwan S. Medawaththa" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Nuwan S. Medawaththa
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Competitions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Competitions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../competitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../competitions/ncbi_codeathon_2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ncbi codeathon 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Image processing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Image processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image%20processing/ck818/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cancer Cell Segmentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Software development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bit_i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIT Pastpapers App v1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bit_ii/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIT Pastpapers App v2.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imagecropp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImageCropp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mycodatalab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MycoDataLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rental/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rental Management System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Car Advertisement Scraper Application
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Car Advertisement Scraper Application
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gui-with-tkinter" class="md-nav__link">
+    <span class="md-ellipsis">
+      GUI with Tkinter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multithreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multithreading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-scraping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Scraping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-handling-with-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Handling with Pandas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scraping-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scraping Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startstop-scraping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start/Stop Scraping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Run the Application
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Breakdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      main.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="main.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technologies-used-in-mainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Used in main.py:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#car_scraperpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      car_scraper.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="car_scraper.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technologies-used-in-car_scraperpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Used in car_scraper.py:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sporify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sporify
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gui-with-tkinter" class="md-nav__link">
+    <span class="md-ellipsis">
+      GUI with Tkinter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multithreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multithreading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-scraping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Scraping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-handling-with-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Handling with Pandas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scraping-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scraping Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startstop-scraping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start/Stop Scraping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Run the Application
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Breakdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      main.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="main.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technologies-used-in-mainpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Used in main.py:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#car_scraperpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      car_scraper.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="car_scraper.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technologies-used-in-car_scraperpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Used in car_scraper.py:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="car-advertisement-scraper-application">Car Advertisement Scraper Application<a class="headerlink" href="#car-advertisement-scraper-application" title="Permanent link">&para;</a></h1>
+<!-- Image Carousel -->
+<div class="carousel">
+  <!-- Radio Buttons for Slide Control -->
+  <input type="radio" name="slides" id="slide1" checked>
+  <input type="radio" name="slides" id="slide2">
+  <input type="radio" name="slides" id="slide3">
+  <input type="radio" name="slides" id="slide4">
+
+  <!-- Slides Container -->
+  <div class="carousel-inner">
+    <a class="glightbox" href="../../../assets/scraper/1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../../assets/scraper/1.png" alt="Image 1"></a>
+    <a class="glightbox" href="../../../assets/scraper/2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../../assets/scraper/2.png" alt="Image 2"></a>
+    <a class="glightbox" href="../../../assets/scraper/3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../../assets/scraper/3.png" alt="Image 3"></a>
+    <a class="glightbox" href="../../../assets/scraper/4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../../../assets/scraper/4.png" alt="Image 4"></a>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <div class="nav">
+    <!-- Previous Button -->
+    <label for="slide4" class="prev">&#10094;</label> <!-- From Slide 1 to Slide 4 -->
+    <label for="slide1" class="prev">&#10094;</label> <!-- From Slide 2 to Slide 1 -->
+    <label for="slide2" class="prev">&#10094;</label> <!-- From Slide 3 to Slide 2 -->
+    <label for="slide3" class="prev">&#10094;</label> <!-- From Slide 4 to Slide 3 -->
+
+    <!-- Next Button -->
+    <label for="slide2" class="next">&#10095;</label> <!-- From Slide 1 to Slide 2 -->
+    <label for="slide3" class="next">&#10095;</label> <!-- From Slide 2 to Slide 3 -->
+    <label for="slide4" class="next">&#10095;</label> <!-- From Slide 3 to Slide 4 -->
+    <label for="slide1" class="next">&#10095;</label> <!-- From Slide 4 to Slide 1 -->
+  </div>
+
+  <!-- Indicators (Dots) -->
+  <div class="carousel-indicators">
+    <label for="slide1"></label>
+    <label for="slide2"></label>
+    <label for="slide3"></label>
+    <label for="slide4"></label>
+  </div>
+</div>
+
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Car Scraper Application is a Python-based GUI application designed to scrape car listings from two popular Sri Lankan websites: <a href="https://ikman.lk/">ikman.lk</a> and <a href="https://riyasewana.com/">riyasewana.com</a>. The application allows users to:</p>
+<ul>
+<li><strong>Specify search parameters</strong>: District, price range, brand, year of manufacture, fuel type, transmission type, and the number of pages to scrape.</li>
+<li><strong>Start and stop the scraping process</strong>: Users can interrupt the scraping at any time.</li>
+<li><strong>Load and filter data</strong>: After scraping, users can filter the results based on model name and mileage, and calculate the average price.</li>
+<li><strong>Save results</strong>: The scraped data can be saved to CSV files for further analysis.</li>
+</ul>
+<p>This application leverages various Python technologies and logical concepts to provide a responsive and user-friendly experience.</p>
+<h2 id="technologies-used">Technologies Used<a class="headerlink" href="#technologies-used" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Python 3.x</strong>: The core programming language used for the application.</li>
+<li><strong>Tkinter</strong>: A standard GUI library in Python for creating graphical user interfaces.</li>
+<li><strong>Requests</strong>: A Python HTTP library used for sending HTTP requests to websites.</li>
+<li><strong>BeautifulSoup</strong>: A library for parsing HTML and XML documents, used here to parse web pages.</li>
+<li><strong>Pandas</strong>: A data analysis library used for data manipulation and analysis.</li>
+<li><strong>Threading</strong>: Python's threading module is used to run tasks in separate threads.</li>
+<li><strong>Concurrent Futures</strong>: Specifically, <code>ThreadPoolExecutor</code> for managing a pool of threads.</li>
+<li><strong>Logging</strong>: Python's logging module for logging events that occur during the execution of the program.</li>
+</ul>
+<hr />
+<h2 id="application-structure">Application Structure<a class="headerlink" href="#application-structure" title="Permanent link">&para;</a></h2>
+<h3 id="gui-with-tkinter">GUI with Tkinter<a class="headerlink" href="#gui-with-tkinter" title="Permanent link">&para;</a></h3>
+<p>The application uses Tkinter to create a graphical user interface. Key components of the GUI include:</p>
+<ul>
+<li><strong>Mode Selection</strong>: Allows users to choose between "CSV Mode" (loading data from CSV files) and "Scraping Mode" (scraping data from websites).</li>
+<li><strong>Output Frame</strong>: Displays messages and results to the user.</li>
+<li><strong>Buttons and Input Fields</strong>: Users can input search parameters, start/stop scraping, load data, and filter results.</li>
+</ul>
+<h3 id="multithreading">Multithreading<a class="headerlink" href="#multithreading" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Threading Module</strong>: The application uses the <code>threading</code> module to run the scraping functions in separate threads. This ensures that the GUI remains responsive while the scraping tasks are running.</li>
+<li><strong>Stop Flag</strong>: A <code>threading.Event</code> object is used as a stop flag to gracefully terminate the scraping process when the user requests it.</li>
+<li><strong>ThreadPoolExecutor</strong>: The <code>concurrent.futures.ThreadPoolExecutor</code> is used to manage threads that run the scraping functions for both websites concurrently.</li>
+</ul>
+<h3 id="web-scraping">Web Scraping<a class="headerlink" href="#web-scraping" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Requests Library</strong>: Used to send HTTP requests to the target websites and retrieve the HTML content.</li>
+<li><strong>BeautifulSoup</strong>: Parses the HTML content to extract relevant data such as price, brand, model, year, etc.</li>
+<li><strong>Respectful Scraping</strong>: The application includes <code>time.sleep(1)</code> calls to avoid overwhelming the target websites with requests.</li>
+</ul>
+<h3 id="data-handling-with-pandas">Data Handling with Pandas<a class="headerlink" href="#data-handling-with-pandas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>DataFrames</strong>: Scraped data is stored in Pandas DataFrames for easy manipulation and analysis.</li>
+<li><strong>CSV Export</strong>: DataFrames can be exported to CSV files for external use.</li>
+<li><strong>Filtering</strong>: Users can filter the data based on model name and mileage, and compute the average price.</li>
+</ul>
+<hr />
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<h3 id="mode-selection">Mode Selection<a class="headerlink" href="#mode-selection" title="Permanent link">&para;</a></h3>
+<p>Upon launching the application, users can select between:</p>
+<ul>
+<li><strong>CSV Mode</strong>: Load existing data from CSV files (<code>ikman_cars_filtered.csv</code> and <code>riyasewana_cars_filtered.csv</code>).</li>
+<li><strong>Scraping Mode</strong>: Scrape new data from the websites based on user-defined parameters.</li>
+</ul>
+<h3 id="scraping-parameters">Scraping Parameters<a class="headerlink" href="#scraping-parameters" title="Permanent link">&para;</a></h3>
+<p>In Scraping Mode, users can input the following parameters:</p>
+<ul>
+<li><strong>District</strong>: Selected from a dropdown list of districts in Sri Lanka.</li>
+<li><strong>Min Price and Max Price</strong>: Define the price range of the cars.</li>
+<li><strong>Brand</strong>: Specify the car brand (e.g., Toyota, Nissan).</li>
+<li><strong>Min Year and Max Year</strong>: Define the range of the year of manufacture.</li>
+<li><strong>Fuel Type</strong>: Choose from <code>petrol</code>, <code>diesel</code>, <code>hybrid</code>, or <code>electric</code>.</li>
+<li><strong>Transmission</strong>: Choose from <code>automatic</code> or <code>manual</code>.</li>
+<li><strong>Pages to Scrape</strong>: Specify the number of pages to scrape from each website.</li>
+</ul>
+<h3 id="startstop-scraping">Start/Stop Scraping<a class="headerlink" href="#startstop-scraping" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Start Scraping</strong>: Begins the scraping process in a separate thread to keep the GUI responsive.</li>
+<li><strong>Stop Scraping</strong>: Users can interrupt the scraping process at any time. The application uses a stop flag to gracefully terminate ongoing scraping tasks.</li>
+</ul>
+<h3 id="filtering-results">Filtering Results<a class="headerlink" href="#filtering-results" title="Permanent link">&para;</a></h3>
+<p>After scraping or loading data, users can:</p>
+<ul>
+<li><strong>Filter by Model Name</strong>: Enter a model name or part of it to filter the results.</li>
+<li><strong>Filter by Mileage</strong>: Specify minimum and/or maximum mileage to filter the cars.</li>
+<li><strong>View Results</strong>: The application displays the number of records after filtering and calculates the average price.</li>
+</ul>
+<hr />
+<h2 id="how-to-run-the-application">How to Run the Application<a class="headerlink" href="#how-to-run-the-application" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Clone the Repository</strong>: Download or clone the project files to your local machine.</li>
+<li><strong>Install Dependencies</strong>: Ensure all required Python libraries are installed:
+   <code>bash
+   pip install requests beautifulsoup4 pandas</code></li>
+<li><strong>Run the Application</strong>: Execute the <code>main.py</code> file:
+   <code>bash
+   python main.py</code></li>
+<li><strong>Use the GUI</strong>:</li>
+<li><strong>Select Mode</strong>: Choose between CSV Mode and Scraping Mode.</li>
+<li><strong>Input Parameters</strong>: If scraping, input the desired parameters.</li>
+<li><strong>Start Scraping</strong>: Click the "Start Scraping" button.</li>
+<li><strong>Stop Scraping</strong>: Click "Stop Scraping" to interrupt.</li>
+<li><strong>Filter Results</strong>: After data is loaded or scraped, use the "Filter Results" button.</li>
+</ol>
+<hr />
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Python 3.x</strong></li>
+<li><strong>requests</strong></li>
+<li><strong>beautifulsoup4</strong></li>
+<li><strong>pandas</strong></li>
+<li><strong>tkinter</strong> (comes standard with Python installations on Windows and macOS)</li>
+<li><strong>concurrent.futures</strong> (included in Python 3 standard library)</li>
+<li><strong>threading</strong> (included in Python 3 standard library)</li>
+<li><strong>logging</strong> (included in Python 3 standard library)</li>
+</ul>
+<hr />
+<h2 id="code-breakdown">Code Breakdown<a class="headerlink" href="#code-breakdown" title="Permanent link">&para;</a></h2>
+<h3 id="mainpy">main.py<a class="headerlink" href="#mainpy" title="Permanent link">&para;</a></h3>
+<p>The <code>main.py</code> script contains the <code>CarScraperGUI</code> class, which manages the GUI and user interactions.</p>
+<h4 id="key-components">Key Components:<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Initialization</strong>: Sets up the main window and initializes variables.</li>
+<li><strong>create_widgets()</strong>: Constructs the GUI elements, including frames, buttons, and input fields.</li>
+<li><strong>toggle_mode()</strong>: Enables or disables buttons based on the selected mode.</li>
+<li><strong>load_data()</strong>: Loads data from CSV files into Pandas DataFrames.</li>
+<li><strong>open_scrape_params()</strong>: Opens a new window for users to input scraping parameters.</li>
+<li><strong>start_stop_scraping()</strong>: Starts or stops the scraping process.</li>
+<li><strong>scrape_data()</strong>: Manages the scraping threads and handles the results.</li>
+<li><strong>on_scraping_complete()</strong>: Updates the GUI after scraping is finished.</li>
+<li><strong>filter_results()</strong>: Opens a window for filtering data.</li>
+<li><strong>apply_filter()</strong>: Applies filters to the data and displays the results.</li>
+<li><strong>on_closing()</strong>: Ensures threads are terminated when the application is closed.</li>
+</ul>
+<h4 id="technologies-used-in-mainpy">Technologies Used in main.py:<a class="headerlink" href="#technologies-used-in-mainpy" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tkinter Widgets</strong>: <code>Tk</code>, <code>Toplevel</code>, <code>Label</code>, <code>Entry</code>, <code>Button</code>, <code>Combobox</code>, <code>Text</code>, <code>Scrollbar</code>.</li>
+<li><strong>Threading</strong>: Used to run the scraping functions without freezing the GUI.</li>
+<li><strong>Concurrent Futures</strong>: Manages threads for scraping functions.</li>
+<li><strong>Event Handling</strong>: Start/Stop buttons and window close events.</li>
+<li><strong>Data Handling</strong>: Pandas for data storage and manipulation.</li>
+<li><strong>Logging</strong>: Records events and errors during scraping.</li>
+</ul>
+<h3 id="car_scraperpy">car_scraper.py<a class="headerlink" href="#car_scraperpy" title="Permanent link">&para;</a></h3>
+<p>The <code>car_scraper.py</code> script contains functions for scraping data from the websites.</p>
+<h4 id="key-functions">Key Functions:<a class="headerlink" href="#key-functions" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>scrape_ikman_cars()</strong>: Scrapes car listings from ikman.lk based on parameters.</li>
+<li><strong>get_ikman_ad_details()</strong>: Extracts details from individual ikman.lk ad pages.</li>
+<li><strong>get_ikman_ads_from_page()</strong>: Retrieves ad URLs from a page on ikman.lk.</li>
+<li><strong>construct_ikman_search_url()</strong>: Builds the search URL with query parameters.</li>
+<li><strong>scrape_riyasewana_cars()</strong>: Scrapes car listings from riyasewana.com based on parameters.</li>
+<li><strong>scrape_riyasewana_page()</strong>: Processes a page of listings from riyasewana.com.</li>
+<li><strong>scrape_riyasewana_individual_listing()</strong>: Extracts details from individual riyasewana.com ad pages.</li>
+</ul>
+<h4 id="technologies-used-in-car_scraperpy">Technologies Used in car_scraper.py:<a class="headerlink" href="#technologies-used-in-car_scraperpy" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Requests</strong>: Sending HTTP requests to retrieve web pages.</li>
+<li><strong>BeautifulSoup</strong>: Parsing HTML content to extract data.</li>
+<li><strong>Regular Expressions</strong>: Cleaning and extracting numeric values from strings.</li>
+<li><strong>Time Module</strong>: Introducing delays between requests to be respectful to the target websites.</li>
+<li><strong>Data Structures</strong>: Using dictionaries and lists to store scraped data.</li>
+<li><strong>Pandas</strong>: Converting data into DataFrames and saving to CSV files.</li>
+<li><strong>Threading Stop Flag</strong>: Checking the stop flag to interrupt scraping when requested.</li>
+</ul>
+<h4 id="logical-concepts">Logical Concepts:<a class="headerlink" href="#logical-concepts" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Modular Design</strong>: Separating scraping logic into distinct functions for maintainability.</li>
+<li><strong>Error Handling</strong>: Try-except blocks to handle exceptions during scraping.</li>
+<li><strong>Data Mapping</strong>: Aligning scraped data with the required fields for consistency.</li>
+<li><strong>Conditional Checks</strong>: Ensuring the scraping process can be interrupted gracefully.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>The Car Scraper Application demonstrates the integration of GUI design, multithreading, web scraping, and data analysis in Python. By combining these technologies, the application provides a user-friendly interface for scraping and analyzing car listings from popular websites.</p>
+<p><strong>Key Takeaways</strong>:</p>
+<ul>
+<li><strong>GUI Responsiveness</strong>: Using threading to keep the GUI responsive during long-running tasks.</li>
+<li><strong>Graceful Termination</strong>: Implementing a stop flag to allow users to interrupt processes.</li>
+<li><strong>Data Management</strong>: Leveraging Pandas for efficient data handling and analysis.</li>
+<li><strong>Web Scraping Ethics</strong>: Including delays between requests to prevent overloading target websites.</li>
+</ul>
+<hr />
+<p><strong>Note</strong>: This application is intended for educational purposes. When scraping websites, always ensure compliance with the website's terms of service and legal regulations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../rental/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rental Management System">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Rental Management System
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sporify/" class="md-footer__link md-footer__link--next" aria-label="Next: Sporify">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Sporify
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Nuwan S. Medawaththa
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
